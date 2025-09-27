@@ -39,6 +39,8 @@ The library function loads an R library such as the tidyverse, providing access 
 
 **Task** In the console (look below), type 2+2 and hit enter. What does it return? Type your answer below. **Answer:**
 
+4
+
 ### Task 2: Variables
 
 **Task** Put the following code -- which stores the numeral 2 as a variable called number -- in the console and hit enter.
@@ -46,6 +48,8 @@ The library function loads an R library such as the tidyverse, providing access 
 ```{r}
 number <- 2
 ```
+
+97912 obs. of 14 variables
 
 Then type this code to multiply the variable called number by itself.
 
@@ -56,6 +60,8 @@ number * number
 What does it return? Type your answer below:
 
 **Answer:**
+
+4
 
 ### Task 3: Install packages
 
@@ -94,6 +100,7 @@ umd_courses <- read_rds("umd_courses.rds")
 Once it loads, look at the environment window at right in RStudio for umd_courses It's next to a small blue circle with a white arrow in it. To the right of that, look at how many "obs" the dataset has ("obs" is short for observation, which is another way of saying rows or records). Look at how many variables it has (another way of saying columns or fields). Write the number of observations and variables below.
 
 **Answer**
+60712 obs. of 8 variables
 
 ### Task 6: Glimpse data
 
@@ -105,6 +112,8 @@ glimpse(umd_courses)
 
 In the space below, write the data type for the "id" column and the "seats" column (it's in light gray, offset by \< \>). **Answer**
 
+"LING889", "LING200", "LING689", "LING499", "LING899", "LING698", "LING898", "LING896", "LING79…
+
 ### Task 7: Examine data "head"
 
 **Task** Run the following codeblock to use head() to examine the first six rows of data. Explore the data by clicking the black arrow on the right side of the output table, allowing you to examine additional columns.
@@ -114,6 +123,8 @@ head(umd_courses)
 ```
 
 In the space below, write the name of the business from the first row of the "name" column. **Answer**
+
+Directed Research
 
 ### Task 8: Explore data with interactive dataframe
 
@@ -138,6 +149,7 @@ umd_courses |>
 Describe what you think each line of this code is doing below, based on the result:
 
 **Answer**
+There is a term number, but it's a coded term that might need to be adjusted to interpret the real term. It is also giving us a class count. For example, the first term entry is 201712 and the class count is 487. 
 
 ### Task 10: Adding arrange to sort the data
 
@@ -152,7 +164,11 @@ umd_courses |>
   arrange(desc(count_classes))
 ```
 
-Compared to the previous codeblock, what has changed and how did that affect the result? **Answer**
+Compared to the previous codeblock, what has changed and how did that affect the result? 
+
+**Answer**
+
+Yes. the entries are now from the highest class count to the lowest. 
 
 ### Task 11: Grouping by multiple columns
 
@@ -171,6 +187,8 @@ Compared to the previous codeblock, how did the output change and what in the co
 
 **Answer**
 
+The data set is now arranged in three columns. First by term in ascending order, then by department in alphabetical order. The third column lists the class count.
+
 ### Task 12: Other summary functions
 
 **Task** Run the following codeblock:
@@ -186,6 +204,8 @@ umd_courses |>
 ```
 
 Compared to the previous codeblock, what has changed and how did that affect the result? **Answer**
+
+The three colums are now term, class counts, and total seats. It is arranged first by descending term. Then by descending total seats. 
 
 ### Task 13: different kinds of summarizations
 
@@ -205,6 +225,8 @@ umd_courses |>
 
 Compared to the previous codeblock, what has changed and how did that affect the result? What do the top terms have in common? **Answer**
 
+It first lists the data by descending term. It is not sorting by total classes. Then it gives us the sum of the total seats for each term. Then the mean of the total seats. Then the median for the seats.  
+
 ### Task 14: more aggregations
 
 **Task** Run the following codeblock to group the umd_courses dataframe by the department. Then do the following summarizations for each group: count the number of courses, add up the total of all seats, calculate the mean and median number of seats and then add lines to calculate the smallest and largest seat numbers using the `min()` and `max()` functions. Then sort so the department with the largest total number of seats is listed first.
@@ -219,13 +241,14 @@ umd_courses |>
     median_seats = median(seats),
     min_seats = min(seats),
     max_seats = max(seats),
-  ) |>
-  arrange(desc(total_seats))
+  arrange(desc(total_seats)) |>
 ```
 
 Compared to the previous codeblock, what has changed and how did that affect the result? How is the data sorted?
 
 **Answer**
+
+Since I'm turning this in late on the weekend, and I need to ask for help, I'm going to submit it like this so I can move on to the next two exercises. 
 
 ### Task 12: Questions
 
