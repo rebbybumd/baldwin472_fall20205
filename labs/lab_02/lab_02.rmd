@@ -34,6 +34,8 @@ maryland_expenses <- read_csv("data/maryland_expenses.csv")
 
 **Q1.** How many departments have offered the courses with "Climate" in the title and at least one seat? Which department has offered the most? **A1.**
 
+
+
 ```{r}
 ```
 

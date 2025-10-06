@@ -250,6 +250,7 @@ Compared to the previous codeblock, what has changed and how did that affect the
 
 Since I'm turning this in late on the weekend, and I need to ask for help, I'm going to submit it like this so I can move on to the next two exercises. 
 
+
 ### Task 12: Questions
 
 No code here; I want you to provide three questions that this data suggests to you. What would you like to ask it?
